@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosemary&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--Celery-50, #F7F9EC);
+}
+
+
+.navbar-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #c0dede;
+}
+
+
+.navbar-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggle span {
+  color: white;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c0dede;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #00494d;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #c0dede;
+}
+
+input:checked+.slider:before {
+  transform: translateX(20px);
+}
+
+.home {
+  display: flex;
+  padding: 4px 22px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  background: var(--Jungle-Mist-800, #2F535D);
+  color: white;
+}
+
+.nav-link-about,
+.nav-link-programs,
+.nav-link-gallery,
+.nav-link-careers,
+.nav-link-contact {
+  color: #2B474F;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar-logo img {
+    width: 80px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+  .navbar-toggle {
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .navbar-logo img {
+    width: 70px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-toggle span {
+    font-size: 14px;
+  }
+}
+
+.navbar-links a.nav-link-about,
+.navbar-links a.nav-link-programs,
+.navbar-links a.nav-link-gallery,
+.navbar-links a.nav-link-careers,
+.navbar-links a.nav-link-contact {
+  color: #2B474F;
+}
+
+.navbar-toggle .nav-link-english {
+  color: #2B474F;
+}
+
+.nav-link-english {
+  color: #2B474F;
+}
